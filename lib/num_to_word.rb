@@ -11,6 +11,12 @@ def wordifier(num)
 
   reverse_num_array = num.to_s.split("").reverse()
 
+  if (num >= 100000) & (num < 1000000)
+    joiner.push(num_words.fetch("ones_teens")[reverse_num_array[5].to_i] + " hundred ")
+    #joiner.push(num_words.fetch("ones_teens")[reverse_num_array[3].to_i] + " thousand ")
+    num = (reverse_num_array[4]+reverse_num_array[3]+reverse_num_array[2]+reverse_num_array[1]+reverse_num_array[0]).to_i
+  end
+
   if (num >= 20000) & (num < 100000)
     joiner.push(num_words.fetch("tens")[reverse_num_array[4].to_i-2])
     joiner.push(num_words.fetch("ones_teens")[reverse_num_array[3].to_i] + " thousand ")
