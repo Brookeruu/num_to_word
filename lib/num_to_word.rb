@@ -11,12 +11,14 @@ def wordifier(num)
 
   bank = num.to_s.split("").reverse()
 
-  if (num >= 10000) & (num < 99999)
+  if (num >= 10000) & (num < 19999)
+  # binding.pry
     joiner.push(num_words.fetch("singles")[(bank[4]+bank[3]).to_i]+" thousand ")
-    num = (bank[0]+bank[1]+bank[2]).to_i
+    num = (bank[2]+bank[1]+bank[0]+).to_i
+
+    # num = (bank[0]+bank[1]+bank[2]).to_i
   end
 
-  # (bank[4]+bank[3]).to_i
 
   if (num >= 1000) & (num < 9999)
     joiner.push(num_words.fetch("singles")[bank[3].to_i]+" thousand ")
