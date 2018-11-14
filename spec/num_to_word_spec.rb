@@ -54,30 +54,4 @@ describe('num_to_word') do
   it("respond with 'too big' when user enters number greater than '999'") do
     expect(wordifier(999)).to(eq('nine hundred ninety-nine'))
   end
-
-  it("respond with 'too big' when user enters number greater than '1999'") do
-    expect(wordifier(1999)).to(eq('one thousand nine hundred ninety-nine'))
-  end
-
-  it("respond with 'too big' when user enters number greater than '1999'") do
-    expect(wordifier(9999)).to(eq('nine thousand nine hundred ninety-nine'))
-  end
-
-  it("respond with 'too big' when user enters number greater than '1999'") do
-    expect(wordifier(20000)).to(eq('twenty thousand'))
-  end
-
-  it("respond with 'too big' when user enters number greater than '1999'") do
-    expect(wordifier(29999)).to(eq('twentynine thousand nine hundred ninety-nine'))
-  end
-
-  it("respond with 'too big' when user enters number greater than '1999'") do
-    expect(wordifier(259990)).to(eq('two hundred fiftynine thousand nine hundred ninety'))
-  end
-
-  it("respond with 'too big' when user enters number greater than '1999'") do
-    expect(wordifier(999999)).to(eq('nine hundred ninetynine thousand nine hundred ninety-nine'))
-  end
-
-
 end
